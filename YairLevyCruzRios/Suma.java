@@ -1,9 +1,23 @@
-class Suma{
-    public static void main (String [] args){
-    int suma(int a, int b){
-        System.out.println("Suma de dos numeros");
-        return a+b;
+import java.util.Scanner;
+
+public class Suma{
+
+    public static int sumar(int a, int b) {
+        return a + b;
     }
-        System.out.println(suma(10,20));
-    }   
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Ingresa el primer número: ");
+        int num1 = scan.nextInt();
+        
+        System.out.print("Ingresa el segundo número: ");
+        int num2 = scan.nextInt();
+        
+        int resultado = sumar(num1, num2);
+        System.out.println("La suma de " + num1 + " y " + num2 + " es: " + resultado);
+        
+        scan.close();
+    }
 }
